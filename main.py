@@ -3,7 +3,7 @@ import queue
 import time
 import multiprocessing
 
-from VAD3 import record_audio  # 每次自动录一段
+from VAD import record_audio  # 每次自动录一段
 from ASR import transcribe
 from LLM import get_intent
 from control import control_device
