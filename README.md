@@ -32,18 +32,18 @@ ool
 ---
 >## 环境要求与配置
 ### 环境要求（本项目运行环境，没考虑其他可兼容环境）
-目前为api版本需要联网
-24H2 x64 win11
-需要麦克风
-需手动创建一个“voice”文件夹用于存放录音文件
+目前为api版本需要联网  
+24H2 x64 win11  
+需要麦克风  
+需手动创建一个“voice”文件夹用于存放录音文件  
 python3.11.3
 - python官网下载地址：
-[Windows installer (64-bit)](https://www.python.org/ftp/python/3.11.3/python-3.11.3-amd64.exe) 
+[Windows installer (64-bit)](https://www.python.org/ftp/python/3.11.3/python-3.11.3-amd64.exe)   
 [Windows installer (32-bit)](https://www.python.org/ftp/python/3.11.3/python-3.11.3.exe)
 
 需要安装ffmpeg
 - 手动安装
-[ffmpeg](https://ffmpeg.org/download.html#build-windows)
+[ffmpeg](https://ffmpeg.org/download.html#build-windows)  
 [CSDN教程](https://blog.csdn.net/Natsuago/article/details/143231558)
 - 命令行
 
