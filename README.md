@@ -37,7 +37,7 @@ ool
 需要麦克风  
 需手动创建一个“voice”文件夹用于存放录音文件  
 python3.11.3
-- python官网下载地址：
+- python官网下载地址：  
 [Windows installer (64-bit)](https://www.python.org/ftp/python/3.11.3/python-3.11.3-amd64.exe)   
 [Windows installer (32-bit)](https://www.python.org/ftp/python/3.11.3/python-3.11.3.exe)
 
