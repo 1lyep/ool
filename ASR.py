@@ -4,7 +4,7 @@
 import whisper
 
 
-model = whisper.load_model("small")  # 可选：tiny / base / small / medium / large
+model = whisper.load_model("medium")  # 可选：tiny / base / small / medium / large
 
 def transcribe(file_path):
     """
