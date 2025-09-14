@@ -1,10 +1,10 @@
 # ool
 ---
 ## README结构
-- 简介(https://github.com/1lyep/ool#%E7%AE%80%E4%BB%8B)
-- 项目结构(https://github.com/1lyep/ool#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)
-- 各模块功能(https://github.com/1lyep/ool#%E5%90%84%E6%A8%A1%E5%9D%97%E5%8A%9F%E8%83%BD)
-- 环境要求与配置(https://github.com/1lyep/ool#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82%E4%B8%8E%E9%85%8D%E7%BD%AE)
+- [简介](https://github.com/1lyep/ool/edit/main/README.md#%E7%AE%80%E4%BB%8B)
+- [项目结构](https://github.com/1lyep/ool/edit/main/README.md#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)
+- [各模块功能](https://github.com/1lyep/ool?tab=readme-ov-file#%E5%90%84%E6%A8%A1%E5%9D%97%E5%8A%9F%E8%83%BD)
+- [环境要求与配置](https://github.com/1lyep/ool?tab=readme-ov-file#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82%E4%B8%8E%E9%85%8D%E7%BD%AE)
 ---
 >## 简介
 #### 一个语音助手
