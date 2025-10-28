@@ -4,6 +4,9 @@ import soundfile as sf
 from collections import deque
 import time
 import os
+from logger import setup_logger
+
+logger = setup_logger("VAD")
 
 def record_audio():
     """
@@ -71,7 +74,7 @@ def record_audio():
             voice_duration += frames / sr
             last_voice_time = now
             if not recording_active and voice_duration >= min_voice_duration:
-                print("开始录音")
+                logger.info("检测到语音，开始录音")
                 recording.extend([frame.copy() for frame in buffer])
                 recording.append(audio.copy())
                 recording_active = True
@@ -80,7 +83,7 @@ def record_audio():
             recording.append(audio.copy())
 
         if recording_active and (now - last_voice_time > silence_limit):
-            print(f"结束录音（静音超过 {silence_limit} 秒）")
+            logger.info(f"结束录音（静音超过 {silence_limit} 秒）")
             filename = f"{save_path}/audio_{int(time.time())}.wav"
             sf.write(filename, np.concatenate(recording), sr)
 
@@ -96,7 +99,7 @@ def record_audio():
         blocksize=frame_samples,
         callback=audio_callback
     ):
-        print("正在监听（每段录音会返回路径）")
+        logger.info("语音监听已启动")
         try:
             while True:
                 if done and filename:
@@ -106,4 +109,4 @@ def record_audio():
                 else:
                     time.sleep(0.1)
         except KeyboardInterrupt:
-            print("已停止监听")
+            logger.info("监听已停止")

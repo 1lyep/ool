@@ -4,6 +4,9 @@
 import requests
 from config import HOME_ASSISTANT_TOKEN, HOME_ASSISTANT_URL
 from hamap import DEVICE_MAP,ACTION_MAP
+from logger import setup_logger
+
+logger = setup_logger("CONTROL")
 
 def control_device(intent):
     """
@@ -40,7 +43,15 @@ def control_device(intent):
     data = {"entity_id": entity_id}
 
     # 发送POST请求到Home Assistant API
-    r = requests.post(url, headers=headers, json=data)
-    # 打印控制结果的状态码
-    print(f"控制结果: {r.status_code}")
+    try:
+        r = requests.post(url, headers=headers, json=data, timeout=5)
+        logger.info(f"控制结果: {r.status_code}")
+        if r.status_code == 200:
+            logger.info(f"设备控制成功: {entity} - {action}")
+        else:
+            logger.warning(f"设备控制失败: {entity} - {action}, 状态码: {r.status_code}")
+        return r.status_code == 200
+    except requests.exceptions.RequestException as e:
+        logger.error(f"控制设备时发生错误: {e}")
+        return False
 
